@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.1px solid #ccc;
+    position: fixed;
+    width: 100vw;
+    backdrop-filter: blur(20px);
+}
+
+nav h1 {
+    font-size: 1em;
+    position: fixed;
+    left: 10px;
+    font-weight: 600;
+    margin-right: 4rem;
+    font-size: 1.5em;
+
+}
+
+nav ol {
+    text-align: end;
+    width: 80%;
+}
+
+nav ol li {
+    list-style-type: none;
+}
+
+nav ol li button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 0;
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+nav ol li button:hover {
+    background-color: rgb(62, 98, 208);
+}
+
+.announcements-container {
+    padding: 10px 20px;
+    padding-top: 90px;
+}
+
+.announcement {
+    box-shadow: 0 6px 10px #ccc;
+    height: max-content;
+    padding: 15px;
+}
+
+.announcement-head {
+    font-size: 3em;
+    font-weight: 100;
+}
+
+.announcement-text {
+    color: black;
+    font-size: 1.5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.news-container {
+    width: 100%;
+    /* Adjust width as needed */
+    height: 200px;
+    /* Adjust height as needed */
+    padding: 20px;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.news-container::-webkit-scrollbar {
+    display: none;
+}
+
+.news-content {
+    display: inline-block;
+    padding: 30px;
+    border-radius: 20px;
+    height: 120px;
+    vertical-align: top;
+    white-space: normal;
+    width: 200px;
+    background-color: whitesmoke;
+    /* Adjust width as needed */
+    font-size: 14px;
+    color: #666;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.news-content:hover {
+    background-color: rgb(209, 209, 209);
+}
+
+.news-heading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.news-content::-webkit-scrollbar {
+    display: none;
+}
+
+@media only screen and (max-width: 720px) {
+
+    .news-content::-webkit-scrollbar {
+        display: show;
+    }
+}
+
+.login-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.login-dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(116px);
+}
+
+h2 {
+    color: black;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+
+.login-put {
+    width: 280px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 0.1px solid #ccc;
+}
+
+.login-put:focus {
+    outline: none;
+}
+
+button.login-button {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    align-self: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.firework {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.spark {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #ffcc00;
+    animation: sparkAnimation 1s infinite;
+}
+
+@keyframes sparkAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
